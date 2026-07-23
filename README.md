@@ -15,7 +15,7 @@ Instructor Seno <br>
 * **One-way encryption** means hashes cannot be reversed back into plain text, protecting user credentials across other services.
 * **Hashing**  a one-way scramble of a password; can't be reversed back.
 * **Example Code** in a Controller folder with a file like UserController.php here is a samole of hashing a password:
-  ``` php
+  ```html
 $incomingFields = $request -> validate([
 'password' => ['required', 'min:8','max:200'] ]);
 $incomingFields['password'] = bcrypt( $incomingFields['password'] );
