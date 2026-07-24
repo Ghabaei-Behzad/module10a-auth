@@ -23,7 +23,7 @@ Instructor Seno <br>
 * **Data breach protection** ensures that stolen database records only reveal unreadable cryptographic strings.
 * **Irreversible verification** lets systems validate user entries securely without storing actual secrets.
 
-### 3. Which file defines the /login and /register routes?
+### 3. Which package registers the /login and /register routes, and which artisan command lets you see them?
 * **`routes/auth.php`** defines these routes (which are automatically imported into `routes/web.php` by the starter kit).
 * **`routes/web.php`** maps them via standard Livewire component routing declarations.
 
