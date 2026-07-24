@@ -31,9 +31,9 @@ When you chose Laravel Volt during the project setup. <br>
 In Laravel 12-13 when you combine the new Livewire Starter Kit with Laravel Volt, <br>
 traditional route files like routes/auth.php are completely removed. <br>
 Instead, Laravel uses single-file Volt components that handle their own routing, actions, and layouts in one place. <br>
-Another good answer is: to use the command: 
+When you use the command: 
 **`Herd\auth-demo>php artisan route:list`**
-looking at the terminal's return output list:
+Your route:list output explicitly confirms that your authentication backend is powered by Laravel Fortify and looking at the terminal's return output list:
 ```
 GET|HEAD login .... login › Laravel\Fortify › AuthenticatedSessionController@create
 POST login .... login.store › Laravel\Fortify › AuthenticatedSessionController@store
