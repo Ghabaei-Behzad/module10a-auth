@@ -28,9 +28,35 @@ Instructor Seno <br>
 * **`routes/web.php`** maps them via standard Livewire component routing declarations.
 
 When you chose Laravel Volt during the project setup. <br>
-In Laravel 12, when you combine the new Livewire Starter Kit with Laravel Volt, <br>
+In Laravel 12-13 when you combine the new Livewire Starter Kit with Laravel Volt, <br>
 traditional route files like routes/auth.php are completely removed. <br>
 Instead, Laravel uses single-file Volt components that handle their own routing, actions, and layouts in one place. <br>
+Another good answer is: to use the command: 
+**`Herd\auth-demo>php artisan route:list`**
+looking at the output list:
+```
+GET|HEAD login .... login › Laravel\Fortify › AuthenticatedSessionController@create
+POST login .... login.store › Laravel\Fortify › AuthenticatedSessionController@store
+```
+the file **`vendor/laravel/fortify/routes/routes.php`** is the authentication management.
+
+the **/login** definitions in the file are:
+```
+// GET /login
+Route::get(RoutePath::for('login', '/login'), [AuthenticatedSessionController::class, 'create'])
+
+// POST /login
+Route::post(RoutePath::for('login', '/login'), [AuthenticatedSessionController::class, 'store'])
+```
+and the **/register** definitions in the file are:
+```
+// GET /register
+Route::get(RoutePath::for('register', '/register'), [RegisteredUserController::class, 'create'])
+
+// POST /register
+Route::post(RoutePath::for('register', '/register'), [RegisteredUserController::class, 'store'])
+
+```
 
 ### 4. What does the auth middleware do, and what happens when a logged-out user hits a page protected by it?
 * **Guard duty** checks if an incoming request originates from an active, authenticated user session.
