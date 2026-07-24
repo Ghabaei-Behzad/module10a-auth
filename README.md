@@ -41,6 +41,9 @@ POST login .... login.store › Laravel\Fortify › AuthenticatedSessionControll
 GET|HEAD register .... register › Laravel\Fortify › RegisteredUserController@create
 POST register .... register.store › Laravel\Fortify › RegisteredUserController@store
 ```
+Here is a screenshot: 
+<img width="995" height="583" alt="Screenshot (1779)" src="https://github.com/user-attachments/assets/510de23c-7cd5-45ca-bf2c-c09b4718a757" />
+
 the file **`vendor/laravel/fortify/routes/routes.php`** is the authentication management.
 
 the **/login** definitions in the file are:
