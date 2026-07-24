@@ -33,10 +33,13 @@ traditional route files like routes/auth.php are completely removed. <br>
 Instead, Laravel uses single-file Volt components that handle their own routing, actions, and layouts in one place. <br>
 Another good answer is: to use the command: 
 **`Herd\auth-demo>php artisan route:list`**
-looking at the output list:
+looking at the terminal's return output list:
 ```
 GET|HEAD login .... login › Laravel\Fortify › AuthenticatedSessionController@create
 POST login .... login.store › Laravel\Fortify › AuthenticatedSessionController@store
+
+GET|HEAD register .... register › Laravel\Fortify › RegisteredUserController@create
+POST register .... register.store › Laravel\Fortify › RegisteredUserController@store
 ```
 the file **`vendor/laravel/fortify/routes/routes.php`** is the authentication management.
 
