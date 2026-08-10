@@ -69,3 +69,7 @@ Route::post(RoutePath::for('register', '/register'), [RegisteredUserController::
 * **Automatic redirection** intercepts unauthenticated guests and bounces them back to the `/login` page.
 * **Route protection** intercepts all incoming web traffic to verify active login tokens.
 * **Guest rejection** stops unauthenticated visitors instantly and forces a redirect to `/login`.
+
+### 5. Upgrade PHP in GitHub Actions (Recommended)
+* **If your application is supposed to run on PHP 8.4***, you need to update the configuration file in your repository so GitHub uses the right version.  Open the .github/workflows/tests.yaml file in your repository.
+* **Change the php-version setting from 8.3 to 8.4.**
