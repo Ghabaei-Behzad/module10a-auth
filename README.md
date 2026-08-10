@@ -14,7 +14,7 @@ Instructor Seno <br>
 * **Security protection** ensures that if a database is leaked or stolen, hackers cannot read user passwords.
 * **One-way encryption** means hashes cannot be reversed back into plain text, protecting user credentials across other services.
 * **Hashing**  a one-way scramble of a password; can't be reversed back.
-* **Example Code** in a Controller folder with a file like UserController.php here is a samole of hashing a password:
+* **Example Code** in a Controller folder with a file like UserController.php here is a sample of hashing a password:
    ```
     $incomingFields = $request -> validate([
     'password' => ['required', 'min:8','max:200'] ]);
